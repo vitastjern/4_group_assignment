@@ -10,7 +10,7 @@
 
 import random
 
-def guessing(guess):
+def guessing(guess):  # return True if all digits found in the correct place, else False
     int_guess= []
     for x in guess:
         int_guess.append(int(x))
@@ -33,7 +33,7 @@ def guessing(guess):
                     print ("Close")
                     found_close += 1
             
-    if found_match == 0 and found_close == 0:
+    if found_match == 0 and found_close == 0:  # the guess was completely off
         print("Nope")
 
     return(found_match == 3)
@@ -42,7 +42,7 @@ digits = list(range(10))
 random.shuffle(digits)
 #print(digits[:3])
 digits = digits[:3]
-print(digits)
+#print(digits)
 
 my_guess = input("What is your guess? ")
 while not guessing(my_guess): 
